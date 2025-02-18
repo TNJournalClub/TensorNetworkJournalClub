@@ -7,7 +7,7 @@
 
 Welcome to the Tensor Network Journal Club repository! This is a collaborative space dedicated to discussing and sharing insights about **numerical methods in tensor network theory**.
 
-Each week, a new folder is created with the corresponding date, containing an `articles.md` file where members can contribute articles and discussions.
+Each week, a new folder is created under `https://github.com/TNJournalClub/tnjournalclub.github.io/notes/` with the corresponding date, containing an `articles.md` file where members can contribute articles and discussions.
 
 For each article you want to share, please include:
 - Title of the paper

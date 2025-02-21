@@ -22,7 +22,7 @@ Related material: [Introduction to lattice gauge theories](https://www.damtp.cam
 
 Link: [https://arxiv.org/abs/2502.05981](https://arxiv.org/abs/2502.05981)
 
-Short summary: The combinatorial problem can always be reduced to (1) having a large number of potential configurations, (2) filtering them based on constraints, and (3) determining the optimal configurations based on a given score function. From the perspective of quantum computing, this can be achieved by first preparing a product state that encompasses all possible configurations as the initial state, and then applying gates that impose the constraints and evaluate the score (which can be realized through imaginary-time evolution $e^{-it*\text{score}}$). This paper decomposes this entire process into logical circuits and generalizes it using the language of tensor networks. Of course, its main point is merely to propose a unified language and a different perspective on the problem, without resulting in any significant improvements to existing algorithms.
+Short summary: The combinatorial problem can always be reduced to (1) having a large number of potential configurations, (2) filtering them based on constraints, and (3) determining the optimal configurations based on a given score function. From the perspective of quantum computing, this can be achieved by first preparing a product state that encompasses all possible configurations as the initial state, and then applying gates that impose the constraints and evaluate the score (which can be realized through imaginary-time evolution $e^{-t*\text{score}}$). This paper decomposes this entire process into logical circuits and generalizes it using the language of tensor networks. Of course, its main point is merely to propose a unified language and a different perspective on the problem, without resulting in any significant improvements to existing algorithms.
 
 Related work:
 - The above work is actually a generalization of [this work](https://arxiv.org/abs/2311.14344), where the authors transformed the Traveling Salesman Problem into tensor networks and demonstrated their effectiveness in a real industrial application.
@@ -32,3 +32,9 @@ Related work:
 
 Discussion:
 - Xuanzhao: With a score function, the factor they added seems to be a non-unitary operator given by~$e^{- \tau \text{score}}$. How to achieve that in real quantum hardware?
+
+ -Yijia: You are right! In quantum computing implementations for TSP, gate operations are not performed using the tensor network formalism in this work - rather, this tensor network structure should be more precisely characterized as just adopting the circuit paradigm!
+
+ I recently came across [a paper on solving TSP using quantum computing](https://arxiv.org/abs/2502.08853). Their approach involves generating the uniform superposition state of all N-length Hamiltonian cycles as an initial state within polynomial gate complexity based on pure quantum dynamic programming, then implementing quantum Fourier transforms to assign weights to each Hamiltonian cycle state through phase encoding, and finally obtaining the solution using Grover's search algorithm.
+ Therefore, the score is encoded in the phase rather than the amplitude, taking the form $e^{i*\text{function}}$, which can be implemented through the QFT.
+

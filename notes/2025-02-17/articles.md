@@ -33,8 +33,8 @@ Related work:
 Discussion:
 - Xuanzhao: With a score function, the factor they added seems to be a non-unitary operator given by~$e^{- \tau \text{score}}$. How to achieve that in real quantum hardware?
 
- -Yijia: You are right! In quantum computing implementations for TSP, gate operations are not performed using the tensor network formalism in this work - rather, this tensor network structure should be more precisely characterized as just adopting the circuit paradigm!
+- Yijia: You are right! In quantum computing implementations for TSP, gate operations are not performed using the tensor network formalism in this work - rather, this tensor network structure should be more precisely characterized as just adopting the circuit paradigm!
 
- I recently came across [a paper on solving TSP using quantum computing](https://arxiv.org/abs/2502.08853). Their approach involves generating the uniform superposition state of all N-length Hamiltonian cycles as an initial state within polynomial gate complexity based on pure quantum dynamic programming, then implementing quantum Fourier transforms to assign weights to each Hamiltonian cycle state through phase encoding, and finally obtaining the solution using Grover's search algorithm.
+    I recently came across [a paper on solving TSP using quantum computing](https://arxiv.org/abs/2502.08853). Their approach involves generating the uniform superposition state of all N-length Hamiltonian cycles as an initial state within polynomial gate complexity based on pure quantum dynamic programming, then implementing quantum Fourier transforms to assign weights to each Hamiltonian cycle state through phase encoding, and finally obtaining the solution using Grover's search algorithm.
  Therefore, the score is encoded in the phase rather than the amplitude, taking the form $e^{i*\text{function}}$, which can be implemented through the QFT.
 

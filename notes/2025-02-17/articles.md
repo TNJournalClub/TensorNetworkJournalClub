@@ -29,3 +29,6 @@ Related work:
 ![Tensor Networks Derived from the Traveling Salesman Problem](/notes/2025-02-17/tsp_circuit.png)
 ![Comparative computational complexities of the Job Reassignment Problem](/notes/2025-02-17/jrp_result.png)
 - After establishing the tensor network framework, the above work employs techniques to decompose basic gates into smaller units (corresponding to the decomposition of multi-order tensors into tensor trains). This reminds me of [a previous work](https://arxiv.org/abs/2004.06455) that rewrote tensor networks corresponding to various combinatorial optimization problems into smaller fundamental units using ZH-calculus equations. This approach helped explain why 2SAT and #XORSAT are in P while 3SAT is NP-complete.
+
+Discussion:
+- Xuanzhao: With a score function, the factor they added seems to be a non-unitary operator given by~$e^{- \tau \text{score}}$. How to achieve that in real quantum hardware?

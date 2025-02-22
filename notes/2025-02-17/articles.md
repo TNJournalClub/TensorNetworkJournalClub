@@ -36,5 +36,8 @@ Discussion:
 - Yijia: You are right! In quantum computing implementations for TSP, gate operations are not performed using the tensor network formalism in this work - rather, this tensor network structure should be more precisely characterized as just adopting the circuit paradigm!
 
     I recently came across [a paper on solving TSP using quantum computing](https://arxiv.org/abs/2502.08853). Their approach involves generating the uniform superposition state of all N-length Hamiltonian cycles as an initial state within polynomial gate complexity based on pure quantum dynamic programming, then implementing quantum Fourier transforms to assign weights to each Hamiltonian cycle state through phase encoding, and finally obtaining the solution using Grover's search algorithm.
- Therefore, the score is encoded in the phase rather than the amplitude, taking the form $e^{i*\text{function}}$, which can be implemented through the QFT.
+    
+    Therefore, the score is encoded in the phase rather than the amplitude, taking the form $ e^{i*\text{function}} $ , which can be implemented through the QFT.
+
+- Xuanzhao: Thanks for the reference! I think the phase encoding is a good idea. It is interesting that they porposed a new way to generate the superposition state of all possible solutions, which is better than the 'selecting tensors' in [Alejandro Mata Ali](https://arxiv.org/abs/2502.05981)'s work. However, there seems to be a gap between the quantum circuit and classical tensor network method.
 

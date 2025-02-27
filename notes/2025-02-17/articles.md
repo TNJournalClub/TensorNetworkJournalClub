@@ -41,3 +41,4 @@ Discussion:
 
 - Xuanzhao: Thanks for the reference! I think the phase encoding is a good idea. It is interesting that they porposed a new way to generate the superposition state of all possible solutions, which is better than the 'selecting tensors' in [Alejandro Mata Ali](https://arxiv.org/abs/2502.05981)'s work. However, there seems to be a gap between the quantum circuit and classical tensor network method.
 
+- Yijia: Here's [an update on the state-of-the-art approaches for solving TSP on quantum computers](https://arxiv.org/pdf/2502.17725). Remarkably, the most efficient algorithm implemented on Ising machines has achieved a time complexity of O(log n)!
